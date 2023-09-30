@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <marquee behavior="scroll" direction="right" >OAU PREDITE STUDY TIME-TABLE</marquee>
+    <div class="me">
+        <img src="oau logo.jpg" alt="OAU logo">
+        <div class="head">
+            <button id="day" class="mon" onclick="mon()">Monday</button>
+            <button id="day" class="tues" onclick="tue()">Tuesday</button>
+            <button id="day" class="wed" onclick="wed()">Wednesday</button>
+            <button id="day" class="thurs" onclick="thurs()">Thursday</button>
+            <button id="day" class="fri" onclick="fri()">Friday</button>
+            <button id="day" class="sat" onclick="sat()">Saturday</button>
+            <button id="day" class="Sun" onclick="sun()">Sunday</button>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="remove" onclick="rem()">X</div>
+        <div class="name">Subject: <span id="subject"></span></div>
+        <div class="time">Time: 9pm - 11pm</div>
+    </div>
+    <script>
+        var subject = document.getElementById("subject");
+        var main = document.getElementById("main");
+        function rem(){
+            main.style.display = "none"
+        }
+        function mon(){
+            main.style.display = "block"
+            subject.innerHTML= "Biology"
+        }
+        
+        function tue(){
+            main.style.display = "block"
+            subject.innerHTML= "Revision"
+        }
+        
+        function wed(){
+            main.style.display = "block"
+            subject.innerHTML= "Chemistry"
+        }
+        function thurs(){
+            main.style.display = "block"
+            subject.innerHTML= "Revision"
+        }
+        function fri(){
+            main.style.display = "block"
+            subject.innerHTML= "Revision"
+        }
+        function sat(){
+            subject.innerHTML= "Physics"
+            main.style.display = "block"
+        }
+        function sun(){
+            main.style.display = "block"
+            subject.innerHTML= "Revision"
+        }
+    </script>
+</body>
+</html>
